@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300&display=swap')
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+@font-face {
+    font-family: "Playfair Display", serif;
+    src: url(https://fonts.gstatic.com/s/waterfall/v3/MCoRzAfo293fACdFKcwo3bv9.woff2)
+    format('woff2');
+} */
+
+
+@layer components {
+    .custome-bg{
+        background-image: linear-gradient(to right rgba(0,0,0,0.836),rgba(0,0,0,0.811),url('/images/bg.svg')), url('https://images.unsplash.com/photo-1612347875193-29d3b684f023?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;    
+        clip-path: polygon(0 0,100% 0, 100% 95%,0% 100%);
+    }
+
+
+    .heading__mini{
+        @apply text-[17px] text-white font-bold opacity-75;
+    }
+
+    .heading__primary{
+        @apply text-[40px] text-white font-bold md:text-[30px] lg:text-[38px] xl:text-[38px];
+    }
+
+    
+    .custom__service::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background-color: linear-gradient(to bottom, #323232,0,#3f3f3f 40%,#1c1c1c 150%),linear-gradient(to top, rgba(0,8,255,0.4),0,rgba(70,14,255,0.25)200%);
+        background-blend-mode: multiply;
+        clip-path: circle(50px at 95% 4%);
+        transition: all;
+        border-radius: 0.5rem;
+    }
+
+}
+
